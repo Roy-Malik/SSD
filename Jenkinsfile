@@ -20,4 +20,12 @@ pipeline {
       }
     }
   }
+  post {
+    always {
+      echo 'Post building cond running'
+    }
+    failure {
+      echo 'post action if build failed'
+    }
+  }
 }
